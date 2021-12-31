@@ -8,19 +8,25 @@
         <title>Coding Quiz</title>
     </head>
     <body>
-        <header></header>
         <button id = "highScores">View High Scores</button>
-            <p id = "timeLeft">Time Left: </p>
+        <p id = "timeLeft">Time Left: </p>
+        
+        <main>
+            <header></header>
+
             <section id = "quiz">
                 <h2>Coding Quiz</h2>
                 <p>Try to answer the following code-related questions within the time limit. 
                     Keep in mind that incorrect answers will penalize your score and time
                     by 10 seconds
                 </p>
+                <div id = "choiceSelection"></div>
                 <button type = "button" id = "start">Start Quiz</button>
             </section>
             <button id = "submit">Submit Quiz</button>
             <div id = "results"></div>
 
+        </main>
+        <script src = "./script.js"></script>
     </body>
 </html>

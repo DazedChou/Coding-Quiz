@@ -27,3 +27,7 @@ header{
     width: 400px;
     margin: auto;
 }
+
+#submit {
+    display: none;
+}
