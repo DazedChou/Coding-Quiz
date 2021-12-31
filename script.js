@@ -135,34 +135,93 @@ function createQuiz() {
         }
 
         choiceA.addEventListener("click",function(){
-            
-            i++;
 
-            //displaying next question
-            displayQ();
-
-        })
+            //Display Next Question
+            if(i<6){
+                i++;
+            }
+    
+            //Set condition to end game when last question has been answered
+            if(i == 6){
+                endGame();
+                clearInterval(timerInterval)
+            }else{
+                displayQ();
+            }
+            //there is no question with the correct choice of A,
+            //so whenever user chooses A, time gets deducted by 10.
+            timer = timer - 10;
+    
+        });
         choiceB.addEventListener("click",function(){
-            i++;
-            //displaying next question
-            displayQ();
+    
+            //conditional to check for answer
+            if(i < 4){
+                timer = timer - 10;
+            }else{
+                score++;
+            }
             
-
-        })
+            //Display Next Question
+            if(i<6){
+                i++;
+            }
+    
+            //Set condition to end game when last question has been answered
+            if(i == 6){
+                endGame();
+                clearInterval(timerInterval)
+            }else{
+                displayQ();
+            }
+    
+        });
         choiceC.addEventListener("click",function(){
-            i++;
-            //displaying next question
-            displayQ();
-
-        })
+    
+            //conditional to check for answer
+            if(i == 2 || i == 4 || i == 5){
+                timer = timer - 10;
+            }else{
+                score++;
+            }
+    
+            //Display Next Question
+            if(i<6){
+                i++;
+            }
+            
+            //Set condition to end game when last question has been answered
+            if(i == 6){
+                clearInterval(timerInterval)
+                endGame();
+            }else{
+                displayQ();
+            }
+    
+        });
         choiceD.addEventListener("click",function(){
-            i++;
-
-            //displaying next question
-            displayQ();
-
-        })
-
+    
+            //conditional to check for answer
+            if(i == 2 ){
+                score++;
+            }else{
+                timer = timer - 10;
+            }
+    
+            //Display Next Question
+            if(i<6){
+                i++;
+            }
+    
+            //Set condition to end game when last question has been answered
+            if(i == 6){
+                clearInterval(timerInterval);
+                endGame();
+            }else{
+                displayQ();
+            }
+    
+        });
         // }
 
         // var buttonA = 
