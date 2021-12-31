@@ -19,11 +19,14 @@ header{
     /* border-bottom: 3px solid rgb(54, 63, 94); */
 }
 .button{
-    text-align: center;
+    text-align: left;
 }
-
+.question{
+    display: flex;
+    flex-direction: column;
+}
 #quiz{
-    text-align: center;
+    text-align: left;
     width: 400px;
     margin: auto;
 }
@@ -37,4 +40,8 @@ header{
     flex-direction: column;
     /* width: 30%; */
     margin: auto;
+}
+.mcButton{
+    text-align: left;
+    width: 40%;
 }
